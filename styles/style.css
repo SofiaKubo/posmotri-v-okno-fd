@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 html {
   block-size: 100%;
 }
@@ -14,7 +33,7 @@ html {
   align-items: center;
   padding: 133px 30px;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   min-block-size: 100vh;
@@ -23,11 +42,12 @@ html {
 .content {
   display: flex;
   flex-direction: row;
+  flex: 1;
   align-items: flex-end;
   gap: 30px;
   width: 100%;
   max-inline-size: 1140px;
-  block-size: 534px;
+  block-size: auto;
 }
 
 .result__video-container {
@@ -49,7 +69,6 @@ video {
   align-items: flex-start;
   gap: 40px;
   inline-size: 711px;
-  block-size: 54px;
 }
 
 .search-form__fieldset {
@@ -72,8 +91,8 @@ video {
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
-  color: #fff;
-  font-family: "Fira Sans Condensed";
+  color: inherit;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -94,12 +113,12 @@ video {
   width: 225px;
   height: 27px;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   outline: none;
   opacity: 1;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -109,7 +128,7 @@ video {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .search-form__textfield::placeholder {
@@ -119,7 +138,7 @@ video {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 1px;
   cursor: pointer;
 }
@@ -130,7 +149,7 @@ video {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: #fff;
+  background-color: currentColor;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -146,7 +165,7 @@ video {
 }
 
 .search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .result__video-container,
@@ -154,21 +173,11 @@ video {
   position: relative;
 }
 
-.preloader {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .button {
   box-sizing: border-box;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
@@ -202,20 +211,21 @@ video {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: -2px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
   gap: 26px;
-  block-size: 100%;
 }
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 0.94;
@@ -231,8 +241,13 @@ video {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: auto;
   overflow-y: auto;
-  block-size: 534px;
+  block-size: 298px; /* Александр, здесь я оставила фиксированную высоту, 
+  поскольку это было явным требованием ТЗ: "Установить жёсткую высоту для .content__list-container 
+  и добавить скролл при переполнении".
+  При удалении высоты скролл исчезает - контейнер начинает растягиваться под контент.
+  Высоту 298px определила по макету, до этого высота 534px была указана неверно. */
 }
 
 .content__list {
@@ -270,7 +285,7 @@ video {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 .content__video-card {
@@ -286,7 +301,7 @@ video {
 
 .content__video-card-title {
   overflow: hidden;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
@@ -298,15 +313,15 @@ video {
 
 .content__video-card-description {
   display: -webkit-box;
+  padding-top: 2px;
   overflow: hidden;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 0.9;
   letter-spacing: 0;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  padding-top: 2px;
 }
 
 .content__video-card-thumbnail {
@@ -314,25 +329,6 @@ video {
   object-position: center;
   inline-size: 194px;
   block-size: 103px;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 /* Кастомный скроллбар */
