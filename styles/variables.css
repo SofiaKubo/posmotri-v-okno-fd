@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --color-background: #1b1919;
+  --color-accent: #545050;
+  --color-text: #fff;
+
+  /* Fonts */
+  --font-family-primary: "Fira Sans Condensed", Arial, sans-serif;
+  --font-family-title: Oswald, Arial, sans-serif;
+  --font-weight-primary: 400;
+  --font-weight-bold: 700;
+
+  /* Font sizes */
+  --font-size-primary: 18px;
+  --font-size-title: 75px;
+  --font-size-card-title: 30px;
+
+  /* Line heights */
+  --line-height-primary: 1;
+  --line-height-title: 0.94;
+  --line-height-card: 1;
+
+  /* Letter spacing */
+  --letter-spacing-primary: 0;
+  --letter-spacing-title: 0;
+  --letter-spacing-card: 0;
+
+  /* Gap */
+  --gap-primary: 30px;
+}

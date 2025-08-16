@@ -32,10 +32,15 @@ html {
   justify-content: center;
   align-items: center;
   padding: 133px 30px;
-  color: #fff;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
+  color: var(--color-text, #fff);
+  font-family: var(
+    --font-family-primary,
+    "Fira Sans Condensed",
+    Arial,
+    sans-serif
+  );
+  font-size: var(--font-size-primary, 18px);
+  background-color: var(--color-background, #1b1919);
   min-block-size: 100vh;
 }
 
@@ -44,7 +49,7 @@ html {
   flex-direction: row;
   flex: 1;
   align-items: flex-end;
-  gap: 30px;
+  gap: var(--gap-primary, 30px);
   width: 100%;
   max-inline-size: 1140px;
   block-size: auto;
@@ -92,11 +97,16 @@ video {
 .search-form__fieldset-title {
   margin-bottom: 5px;
   color: inherit;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  font-family: var(
+    --font-family-primary,
+    "Fira Sans Condensed",
+    Arial,
+    sans-serif
+  );
+  font-weight: var(--font-weight-primary, 400);
+  font-size: var(--font-size-primary, 18px);
+  line-height: var(--line-height-primary, 1);
+  letter-spacing: var(--letter-spacing-primary, 0);
 }
 
 .visually-hidden {
@@ -117,12 +127,17 @@ video {
   border-bottom: 1px solid currentColor;
   outline: none;
   opacity: 1;
-  color: #fff;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  color: var(--color-text, #fff);
+  font-family: var(
+    --font-family-primary,
+    "Fira Sans Condensed",
+    Arial,
+    sans-serif
+  );
+  font-weight: var(--font-weight-primary, 400);
+  font-size: var(--font-size-primary, 18px);
+  line-height: var(--line-height-primary, 1);
+  letter-spacing: var(--letter-spacing-primary, 0);
   background-color: transparent;
   appearance: none;
 }
@@ -176,12 +191,17 @@ video {
 .button {
   box-sizing: border-box;
   border: 1px solid currentColor;
-  color: #fff;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  color: var(--color-text, #fff);
+  font-family: var(
+    --font-family-primary,
+    "Fira Sans Condensed",
+    Arial,
+    sans-serif
+  );
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-primary, 18px);
+  line-height: var(--line-height-primary, 1);
+  letter-spacing: var(--letter-spacing-primary, 0);
   text-align: center;
   background-color: transparent;
   cursor: pointer;
@@ -203,7 +223,7 @@ video {
 }
 
 .button:active {
-  background-color: #545050;
+  background-color: var(--color-accent, #545050);
 }
 
 .button:focus {
@@ -224,23 +244,23 @@ video {
 }
 
 .title {
-  color: #fff;
-  font-family: Oswald, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 0.94;
-  letter-spacing: 0;
+  color: var(--color-text, #fff);
+  font-family: var(--font-family-title, Oswald, Arial, sans-serif);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-title, 75px);
+  line-height: var(--line-height-title, 0.94);
+  letter-spacing: var(--letter-spacing-title, 0);
   text-transform: uppercase;
 }
 
 .content__accent {
-  color: #545050;
+  color: var(--color-accent, #545050);
 }
 
 .content__list-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--gap-primary, 30px);
   margin-top: auto;
   overflow-y: auto;
   block-size: 298px;
@@ -249,7 +269,7 @@ video {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: var(--gap-primary, 30px);
 }
 
 .content__list-item {
@@ -259,13 +279,13 @@ video {
 
 .content__card-link {
   display: block;
-  color: #fff;
+  color: var(--color-text, #fff);
   text-decoration: none;
   cursor: pointer;
 }
 
 .content__card-link_current {
-  background-color: #545050;
+  background-color: var(--color-accent, #545050);
 }
 
 .content__card-link:hover {
@@ -273,7 +293,7 @@ video {
 }
 
 .content__card-link:active {
-  background-color: #545050;
+  background-color: var(--color-accent, #545050);
 }
 
 .content__card-link:focus {
@@ -297,11 +317,11 @@ video {
 
 .content__video-card-title {
   overflow: hidden;
-  font-family: Oswald, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1;
-  letter-spacing: 0;
+  font-family: var(--font-family-title, Oswald, Arial, sans-serif);
+  font-weight: var(--font-weight-bold, 700);
+  font-size: var(--font-size-card-title, 30px);
+  line-height: var(--line-height-card, 1);
+  letter-spacing: var(--letter-spacing-card, 0);
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -311,11 +331,16 @@ video {
   display: -webkit-box;
   padding-top: 2px;
   overflow: hidden;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-family: var(
+    --font-family-primary,
+    "Fira Sans Condensed",
+    Arial,
+    sans-serif
+  );
+  font-weight: var(--font-weight-primary, 400);
+  font-size: var(--font-size-primary, 18px);
   line-height: 0.9;
-  letter-spacing: 0;
+  letter-spacing: var(--letter-spacing-primary, 0);
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
